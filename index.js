@@ -144,16 +144,7 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  //let onScreen = document.getElementsByClassName('rock').length;
-  //for(let i=0; i < onScreen; i++){
-    //document.getElementsByClassName('rock')[i].remove();
-  //}
-  //alert()
-  //window.cancelAnimationFrame(createRock);
-  for(let i=0; i < 3; i++){
-  //while(document.getElementsByClassName('rock')[0]){
-    document.getElementsByClassName('rock')[0].remove();
-  }
+  ROCKS.forEach(function(rock) { rock.remove() })
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
 }
