@@ -120,7 +120,7 @@ function createRock(x) {
         window.requestAnimationFrame(moveRock);
         }
       else if (top >= 400){
-        GAME.removeChild(document.getElementsByClassName('rock')[0]);
+        rock.remove();
       } 
     }
       
